@@ -60,6 +60,10 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+.title {
+  font-size: 50px;
+}
+
 .btn {
   background: none;
   border: none;
@@ -144,7 +148,7 @@ a {
 }
 
 .s {
-  background: -webkit-linear-gradient(90deg, #ee128f, #ec0813);
+  background: -webkit-linear-gradient(90deg,  #db0b81, #eb11f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
