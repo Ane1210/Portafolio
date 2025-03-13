@@ -86,7 +86,7 @@ a {
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: calc(100% - 150px);
+  height: 100vh;
   width: 100%;
 }
 
@@ -157,6 +157,7 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  align-items: center;
   padding: 0 1.5rem;
 }
 
@@ -354,4 +355,121 @@ a {
   .banner .content h1{
       font-size: 5em;
   }
+}
+
+/* Card seccion */
+
+.card {
+  width: 220px;
+  height: 340px;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+}
+.card.figma {
+  background: linear-gradient(135deg, #09AFFF, #125575);
+}
+.card.vue {
+  background: linear-gradient(135deg, #3471a3, #4ecf80);
+  
+}
+
+.card .product {
+  height: 85%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.product .number {
+  font-size: 80px;
+  line-height: 80px;
+  font-style: italic;
+  opacity: 0.25;
+}
+.product .sneakers {
+  font-size: 35px;
+  line-height: 35px;
+  font-style: italic;
+  opacity: 0.7;
+}
+.product img {
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-35%, -45%, 0);
+  pointer-events: none;
+}
+
+.btn-cv{
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  background: #d2d2d2;
+  color: #000000;
+  padding: 10px 25px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
+  border: #000000 1px solid;
+}
+
+.btn-cv:hover{
+  background: #000000;
+  color: #ffffff;
+}
+ .price {
+  background: rgba(0, 0, 0, 0.15);
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px 40px;
+  border-radius: 0 99px 0 99px;
+  color: #000000;
+}
+
+.card .title {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 12px 12px;
+  transform-style: preserve-3d;
+}
+.card.figma .title {
+  background: #039BE5;
+}
+.card.vue .title {
+  background: #4ecf80;
+}
+
+.card:hover .product img {
+  transform: translate3d(-50%, -40%, 80px);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:hover .product .number {
+  transform: translateZ(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 1;
+}
+.card:hover .product .sneakers {
+  transform: translateZ(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.85;
+}
+.card:hover .product .price {
+  transform: translateZ(20px);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.card:hover .title p {
+  transform: translateZ(20px);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 1.5em;
 }

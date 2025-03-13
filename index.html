@@ -68,6 +68,7 @@
     </div>
     
     <div class="container">
+      <div class="side-one">
       <div class="banner">
         <div class="slider" style="--quantity: 5">
             <div class="item" style="--position: 1"><img src="./img/dragon_1.jpg" alt=""></div>
@@ -84,6 +85,41 @@
         </div>
     </div>
     </div>
+    </div>
+
+    <div class="container banner">
+    <div class="card vue">
+      <span class="price">Nivel Básico</span>
+        <div class="product">
+            <span class="sneakers">FRONTEND</span>
+            <img src="img/vue_logo.png">
+            <a  target="_blank" href="https://drive.google.com/file/d/1Zq1wtHnwi8hdqM-du-E1b1dnh0BQ8HHo/view?usp=sharing" class="btn-cv">Ver</a>
+        </div>
+        <div class="title">
+            <p>Vue</p>
+        </div>
+    </div>
+
+    <div class="card figma">
+      <span class="price">Nivel Básico</span>
+      <div class="product">
+          <span class="sneakers">Diseño</span>
+          <img src="img/figma_logo.png">
+          <a target="_blank" href="https://drive.google.com/file/d/1L8sVWV0pSWSWa8lXtbyLhbsEo2vmLLMk/view?usp=drive_link" class="btn-cv">Ver</a>
+      </div>
+      <div class="title">
+          <p>Figma</p>
+      </div>
+  </div>
+    </div>
     <script src="./script.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+          max: 10,
+          speed: 5000,
+          glare: true,
+          'max-glare': 0.5,
+      });
+  </script>
   </body>
 </html>
