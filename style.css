@@ -148,7 +148,7 @@ a {
 }
 
 .s {
-  background: -webkit-linear-gradient(90deg,  #db0b81, #eb11f3);
+  background: -webkit-linear-gradient(90deg, #db0b81, #eb11f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -171,16 +171,20 @@ a {
 }
 
 .circle img {
-  max-width: 470px;
-  max-height: 500px;
-  width: 100%;
+  max-width: 240px;
+  max-height: 400px;
+  width: 90%;
   position: absolute;
-  bottom: 0;
-  right: 11%;
   bottom: 5%;
+  right: 18%;
   object-fit: cover;
   mask-image: linear-gradient(black, 95%, transparent);
-  border-radius: 50%;
+  border-radius: 15%;
+  transition: transform 1s ease;
+}
+
+.circle img:hover {
+  transform: scale(1.05); /* Escala ligeramente la imagen al pasar el ratón */
 }
 
 .circle-text {
@@ -223,7 +227,7 @@ a {
 
 /* seccion slider */
 
-.banner{
+.banner {
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -233,7 +237,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.banner .slider{
+.banner .slider {
   position: absolute;
   width: 200px;
   height: 250px;
@@ -244,27 +248,29 @@ a {
   animation: autoRun 20s linear infinite;
   z-index: 2;
 }
-@keyframes autoRun{
-  from{
-      transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-  }to{
-      transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
   }
 }
 
-.banner .slider .item{
+.banner .slider .item {
   position: absolute;
   inset: 0 0 0 0;
-  transform: 
-      rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(400px);
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(400px);
 }
-.banner .slider .item img{
+.banner .slider .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.banner .content{
+.banner .content {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -278,14 +284,14 @@ a {
   align-items: center;
   z-index: 1;
 }
-.banner .content h1{
-  font-family: 'ICA Rubrik';
+.banner .content h1 {
+  font-family: "ICA Rubrik";
   font-size: 16em;
   line-height: 1em;
-  color: #25283B;
+  color: #25283b;
   position: relative;
 }
-.banner .content h1::after{
+.banner .content h1::after {
   position: absolute;
   inset: 0 0 0 0;
   content: attr(data-content);
@@ -293,15 +299,15 @@ a {
   -webkit-text-stroke: 2px #d2d2d2;
   color: transparent;
 }
-.banner .content .author{
+.banner .content .author {
   font-family: Poppins;
   text-align: right;
   max-width: 200px;
 }
-.banner .content h2{
+.banner .content h2 {
   font-size: 3em;
 }
-.banner .content .model{
+.banner .content .model {
   background-image: url(img/nft.png);
   width: 100%;
   height: 75vh;
@@ -314,46 +320,48 @@ a {
   z-index: 3;
 }
 @media screen and (max-width: 1023px) {
-  .banner .slider{
-      width: 160px;
-      height: 200px;
-      left: calc(50% - 80px);
+  .banner .slider {
+    width: 160px;
+    height: 200px;
+    left: calc(50% - 80px);
   }
-  .banner .slider .item{
-      transform: 
-          rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-          translateZ(300px);
+  .banner .slider .item {
+    transform: rotateY(
+        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+      )
+      translateZ(300px);
   }
-  .banner .content h1{
-      text-align: center;
-      width: 100%;
-      text-shadow: 0 10px 20px #000;
-      font-size: 7em;
+  .banner .content h1 {
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 10px 20px #000;
+    font-size: 7em;
   }
-  .banner .content .author{
-      color: #fff;
-      padding: 20px;
-      text-shadow: 0 10px 20px #000;
-      z-index: 2;
-      max-width: unset;
-      width: 100%;
-      text-align: center;
-      padding: 0 30px;
+  .banner .content .author {
+    color: #fff;
+    padding: 20px;
+    text-shadow: 0 10px 20px #000;
+    z-index: 2;
+    max-width: unset;
+    width: 100%;
+    text-align: center;
+    padding: 0 30px;
   }
 }
 @media screen and (max-width: 767px) {
-  .banner .slider{
-      width: 100px;
-      height: 150px;
-      left: calc(50% - 50px);
+  .banner .slider {
+    width: 100px;
+    height: 150px;
+    left: calc(50% - 50px);
   }
-  .banner .slider .item{
-      transform: 
-          rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-          translateZ(180px);
+  .banner .slider .item {
+    transform: rotateY(
+        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+      )
+      translateZ(180px);
   }
-  .banner .content h1{
-      font-size: 5em;
+  .banner .content h1 {
+    font-size: 5em;
   }
 }
 
@@ -369,11 +377,10 @@ a {
   margin: 3rem;
 }
 .card.figma {
-  background: linear-gradient(135deg, #09AFFF, #125575);
+  background: linear-gradient(135deg, #09afff, #125575);
 }
 .card.vue {
   background: linear-gradient(135deg, #3471a3, #4ecf80);
-  
 }
 
 .card .product {
@@ -406,7 +413,7 @@ a {
   pointer-events: none;
 }
 
-.btn-cv{
+.btn-cv {
   position: absolute;
   bottom: 5%;
   left: 0;
@@ -420,11 +427,11 @@ a {
   border: #000000 1px solid;
 }
 
-.btn-cv:hover{
+.btn-cv:hover {
   background: #000000;
   color: #ffffff;
 }
- .price {
+.price {
   background: rgba(0, 0, 0, 0.15);
   margin-top: 20%;
   margin-left: auto;
@@ -443,7 +450,7 @@ a {
   transform-style: preserve-3d;
 }
 .card.figma .title {
-  background: #039BE5;
+  background: #039be5;
 }
 .card.vue .title {
   background: #4ecf80;
